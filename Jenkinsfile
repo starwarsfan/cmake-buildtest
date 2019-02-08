@@ -164,9 +164,7 @@ pipeline {
                     }
                 }
                 stage('Mac') {
-                    agent {
-                        any
-                    }
+                    agent any
                     steps {
                         script {
                             sh "echo 'Not yet implemented...'"
@@ -174,9 +172,7 @@ pipeline {
                     }
                 }
                 stage('Windows') {
-                    agent {
-                        any
-                    }
+                    agent any
                     steps {
                         script {
                             sh "echo 'Not yet implemented...'"
