@@ -1,0 +1,8 @@
+# Jetbrains metadata
+.idea/
+*.iml
+
+# CMake stuff
+build/
+cmake-build-debug/
+cmake/

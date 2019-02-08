@@ -1,0 +1,9 @@
+### At first perform source build ###
+FROM starwarsfan/cmake-builder-debian:1.0
+MAINTAINER Yves Schumann <yves@eisfair.org>
+
+COPY . /demo-app
+
+RUN mkdir /demo-app/build \
+ && cd /demon-app/build \
+ && cmake ..
