@@ -15,7 +15,7 @@ pipeline {
         BRANCH_TO_DEPLOY = 'xyz'
         GITHUB_TOKEN = credentials('GitHub-Token')
         DEVELOP_TAG = "Build${BUILD_NUMBER}"
-        RELEASE_TAG = '1.0.0'
+        RELEASE_TAG = '1.0.1'
         GIT_TAG_TO_USE = "${DEVELOP_TAG}"
         GIT_COMMIT_SHORT = sh(
                 script: "printf \$(git rev-parse --short ${GIT_COMMIT})",
