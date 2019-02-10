@@ -5,7 +5,7 @@ MAINTAINER Yves Schumann <yves@eisfair.org>
 COPY . /demo-app
 
 RUN mkdir /demo-app/build \
- && cd /demon-app/build \
+ && cd /demo-app/build \
  && cmake ..
 
 ### Now upload binaries to GitHub ###
