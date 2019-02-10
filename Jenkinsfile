@@ -143,13 +143,9 @@ pipeline {
             //noinspection GroovyAssignabilityCheck
             parallel {
                 stage('Build Debian binaries') {
-                    stages {
-                        stage('Build Debian binaries') {
-                            steps {
-                                script {
-                                    buildBranch('Docker/Debian/Dockerfile', "starwarsfan/cmake-buildtest-debian:${GIT_TAG_TO_USE}", "${GIT_TAG_TO_USE}", "${GIT_COMMIT_SHORT}")
-                                }
-                            }
+                    steps {
+                        script {
+                            buildBranch('Docker/Debian/Dockerfile', "starwarsfan/cmake-buildtest-debian:${GIT_TAG_TO_USE}", "${GIT_TAG_TO_USE}", "${GIT_COMMIT_SHORT}")
                         }
                     }
                 }
