@@ -80,7 +80,7 @@ pipeline {
             stages {
                 stage('Create Git tag') {
                     steps {
-                        sshagent(credentials: ['f06ad0d1-a5e8-41f1-a48e-e877303770b9']) {
+                        sshagent(credentials: ['GitHub-SSH']) {
                             createTag(
                                     tag: "${GIT_TAG_TO_USE}",
                                     commit: "${GIT_COMMIT_SHORT}",
