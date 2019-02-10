@@ -6,7 +6,11 @@ COPY . /demo-app
 
 RUN mkdir /demo-app/build \
  && cd /demo-app/build \
- && cmake ..
+ && cmake .. \
+ && cmake --build .
+
+RUN echo "Build is finished now, just execute result right here to show something on the log:" \
+ && /demo-app/build/hello-world
 
 ### Now upload binaries to GitHub ###
 FROM starwarsfan/github-release-uploader:1.0
